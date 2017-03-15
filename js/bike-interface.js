@@ -1,8 +1,9 @@
 var Bike = require('./../js/bike.js').bikeModule;
 
 var displayBike = function(city, color, make) {
-  $('#solution').append("<li>Bike city: <em>" + city + "</em> Color: <em>"+ color + "  </em>Make: <em>" + make + "</em></li>")
-}
+  $('#solution').append("<li>Bike city: <em>" + city + "</em> Color: <em>"+ color + "  </em>Make: <em>" + make + "</em></li>");
+};
+
 $(document).ready(function() {
   var currentBike = new Bike();
 
