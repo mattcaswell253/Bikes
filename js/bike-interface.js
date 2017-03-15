@@ -1,6 +1,11 @@
 var Bike = require('./../js/bike.js').bikeModule;
 
+var displayBike = function(city, color, make) {
+  $('#solution').append("<li>Bike city: <em>" + city + "</em> Color: <em>"+ color + "  </em>Make: <em>" + make + "</em></li>")
+}
 $(document).ready(function() {
+  var currentBike = new Bike();
+
   $('form').submit(function(event) {
     event.preventDefault();
     var color = $('#color').val();
@@ -13,7 +18,7 @@ $(document).ready(function() {
     $('#city').val("");
     $('#distance').val("");
     $('#year').val("");
-    var currentBike = new Bike();
-    var result = currentBike.find(city, color, make, distance, year);
+
+    var result = currentBike.find(city, color, make, displayBike);
   });
 });
