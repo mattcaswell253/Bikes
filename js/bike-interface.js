@@ -1,5 +1,8 @@
+var Bike = require('./../js/bike.js').bikeModule;
+
 $(document).ready(function() {
-  $('form').submit(function() {
+  $('form').submit(function(event) {
+    event.preventDefault();
     var color = $('#color').val();
     var make = $('#make').val();
     var city = $('#city').val();
@@ -10,6 +13,7 @@ $(document).ready(function() {
     $('#city').val("");
     $('#distance').val("");
     $('#year').val("");
-    $.get('https://bikeindex.org:443/api/v3/search?page=1&per_page=25&manufacturer=' + make + ' &location=' + city + '&distance=' + distance + '&stolenness=stolen&year=' + year + '&access_token=ab24acd3ed8bffe04230ed7b746b35a0d8ad027b2dcc150fac3341def8eee73e')
+    var currentBike = new Bike();
+    var result = currentBike.find(city, color, make, distance, year);
   });
 });
