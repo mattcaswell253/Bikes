@@ -1,4 +1,5 @@
 var Bike = require('./../js/bike.js').bikeModule;
+var Map = require('./../js/map.js').mapModule;
 
 var displayBike = function(city, color, make) {
   $('#solution').append("<li>Bike city: <em>" + city + "</em> Color: <em>"+ color + "  </em>Make: <em>" + make + "</em></li>");
@@ -9,6 +10,8 @@ $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault();
+    var map = new Map();
+    map.initMap();
     var color = $('#color').val();
     var make = $('#make').val();
     var city = $('#city').val();
