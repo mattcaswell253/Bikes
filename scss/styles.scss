@@ -1,0 +1,27 @@
+$gray : #d3d3d3;
+$green : #75B975;
+
+h2 {
+  text-align: center;
+}
+
+body {
+  background: url("../../img/wheel.jpg") no-repeat center center fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.box {
+  background: $gray;
+  border-radius: 20px;
+  padding: 40px 80px;
+  margin-top: 45px;
+  .button {
+    font-weight: bold;
+    text-align: center;
+    background: $green;
+    color: white;
+  }
+}

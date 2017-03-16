@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="build/css/vendor.css">
+  <link rel="stylesheet" href="build/css/styles.css">
   <script src="build/js/vendor.min.js"></script>
   <script type="text/javascript" src="build/js/app.js"></script>
 
@@ -14,19 +14,21 @@
   <div class="container">
     <h2>Search for your stolen bike!</h2>
     <form>
-      <div class="form-group">
-        <label for="color">Color</label>
-        <input class="form-control" type="text" name="color" id="color">
-      </div>
-      <div class="form-group">
-        <label for="make">Make</label>
-        <input class="form-control" type="text" name="make" id="make">
-      </div>
-      <div class="form-group">
-        <label for="city">City</label>
-        <input class="form-control" type="text" name="city" id="city">
-      </div>
-      <button type="submit" class="btn btn-success">Search!</button>
+      <div class="box">
+        <div class="form-group">
+          <label for="color">Color</label>
+          <input class="form-control" type="text" name="color" id="color">
+        </div>
+        <div class="form-group">
+          <label for="make">Make</label>
+          <input class="form-control" type="text" name="make" id="make">
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input class="form-control" type="text" name="city" id="city">
+        </div>
+        <button type="submit" class="btn btn-success">Search!</button>
+      </div
     </form>
     <div>
       <ol id="solution">
